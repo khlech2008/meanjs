@@ -35,8 +35,8 @@ module.exports = {
     title: defaultEnvConfig.app.title + ' - Development Environment'
   },
   facebook: {
-    clientID: process.env.FACEBOOK_ID || 'APP_ID',
-    clientSecret: process.env.FACEBOOK_SECRET || 'APP_SECRET',
+    clientID: process.env.FACEBOOK_ID || '1528566004105179',
+    clientSecret: process.env.FACEBOOK_SECRET || 'd1536a62112239867aa32fe1289aadac',
     callbackURL: '/api/auth/facebook/callback'
   },
   twitter: {
@@ -60,8 +60,8 @@ module.exports = {
     callbackURL: '/api/auth/github/callback'
   },
   paypal: {
-    clientID: process.env.PAYPAL_ID || 'CLIENT_ID',
-    clientSecret: process.env.PAYPAL_SECRET || 'CLIENT_SECRET',
+    clientID: process.env.PAYPAL_ID || 'AUZXrgreSPmEP8DuTXRwjnk0-yonqdyYpuGSstUqmgiap2_U-9MmDj87S9p_c1rH4SJ9rCQDekvZms0P',
+    clientSecret: process.env.PAYPAL_SECRET || 'EPZJJ421Ucc0TqCEGm2DFUgTQKyH1n7LdTocKtgYXo__apkO9rNyOpdGPLeX8G29uONzbXCvM75UwQRr',
     callbackURL: '/api/auth/paypal/callback',
     sandbox: true
   },
