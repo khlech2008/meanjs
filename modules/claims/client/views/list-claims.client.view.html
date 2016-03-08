@@ -1,0 +1,22 @@
+<section>
+  <div class="page-header">
+    <h1>Claims</h1>
+  </div>
+  <div class="list-group">
+    <a data-ng-repeat="claim in vm.claims"
+       data-ui-sref="claims.view({ claimId: claim._id })"
+       class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span data-ng-bind="claim.created | date:'mediumDate'"></span>
+        by
+        <span data-ng-if="claim.user" data-ng-bind="claim.user.displayName"></span>
+        <span data-ng-if="!claim.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" data-ng-bind="claim.name"></h4>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" data-ng-if="vm.claims.$resolved && !vm.claims.length">
+    No Claims yet, why don't you <a data-ui-sref="claims.create">create one</a>?
+  </div>
+</section>
